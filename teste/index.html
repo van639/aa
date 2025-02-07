@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposta de Namoro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Quer namorar comigo yas fedida?</h1>
+    <div class="buttons">
+      <button id="btnSim" onclick="sim()">Sim</button>
+      <button id="btnNao" onclick="nao()">Não</button>
+    </div>
+  </div>
+
+  <div class="response" id="response" style="display:none;">
+    <h2>Agora somos momolados hehe!</h2>
+    <img src="./img/OIP.jpeg" alt="Imagem de amor" />
+  </div>
+
+  <script>
+    function sim() {
+      document.querySelector('.container').style.display = 'none';
+      document.getElementById('response').style.display = 'block';
+    }
+
+    function nao() {
+      const btnNao = document.getElementById('btnNao');
+      btnNao.style.position = 'absolute';
+      btnNao.style.top = Math.random() * window.innerHeight + 'px';
+      btnNao.style.left = Math.random() * window.innerWidth + 'px';
+    }
+  </script>
+</body>
+</html>
